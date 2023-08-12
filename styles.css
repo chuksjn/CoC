@@ -8,20 +8,25 @@ ul.navbar {
     list-style-type: none; 
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: white;
     font-family:'Ultra', serif; 
   }
 
   ul.navbar  {
     display: inline;
+    float:right;
+    display:flex;
+    flex-direction: row;
   }
 
   ul.navbar  a {
     display:  inline;
     padding: 8px 16px;
     text-decoration: none;
-    color: #ffff;
-    float:right;
+    color: black;
+   
+    
+
   }
 
   ul.navbar  a:hover {
@@ -29,11 +34,11 @@ ul.navbar {
   }
 body{
 
-    background-color: black;
-    color:white;
+    background-color: white;
+    color:black;
 }
 a, li{
-    color:#ffff;
+    color:black;
     list-style-type: none;
 }
 a:hover{
