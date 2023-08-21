@@ -30,7 +30,7 @@ ul.navbar {
   }
 
   ul.navbar  a:hover {
-    background-color: #ff0295;
+    background-color: #51039B;
   }
 body{
 
@@ -42,7 +42,7 @@ a, li{
     list-style-type: none;
 }
 a:hover{
-    color:#ff3aad;
+    color:#51039B;
     
 }
 .logo{
@@ -59,8 +59,8 @@ a:hover{
     0%, 39%, 41%, 59%, 61%, 100%{
         text-shadow: 
         white 0 0 12px,
-        #ff3aad 0 0 24px,
-        #ff3aad 0 0 36px;
+        #51039B 0 0 24px,
+        #51039B 0 0 36px;
     }
     40%, 60%{
         text-shadow:none;
