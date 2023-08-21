@@ -52,6 +52,11 @@ section > ul {
     text-align: left;
 }
 
+.portrait{
+    border-radius: 50%;
+    width:20vw ; height : auto;
+}
+
 /* Logo Styles */
 .logo {
     font-family: 'Ultra', serif;
