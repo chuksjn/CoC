@@ -53,8 +53,11 @@ section > ul {
 }
 
 .portrait{
-    border-radius: 50%;
-    width:20vw ; height : auto;
+    border-radius: 100%;
+    width:30vw ; 
+    height : auto;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo Styles */
