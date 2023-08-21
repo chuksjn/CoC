@@ -1,68 +1,63 @@
- @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Ultra&display=swap');
 
-
-html{
+/* Global Styles */
+html {
     scroll-behavior: smooth;
 }
-ul.navbar {
-    list-style-type: none; 
-    margin: 0;
-    padding: 0;
-    background-color: white;
-    font-family:'Ultra', serif; 
-  }
 
-  ul.navbar  {
-    display: inline;
-    float:right;
-    display:flex;
-    flex-direction: row;
-  }
-
-  ul.navbar  a {
-    display:  inline;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: black;
-   
-    
-
-  }
-
-  ul.navbar  a:hover {
-    background-color: #51039B;
-  }
-body{
-
-    background-color: white;
-    color:black;
-}
-a, li{
-    color:black;
-    list-style-type: none;
-}
-a:hover{
-    color:#51039B;
-    
-}
-.logo{
+body {
+    background-color: #111; /* cooler black */
+    color: white;
     font-family: 'Ultra', serif;
 }
-.content{
-    font-family:'PT Serif', serif;
-}
-.logo a:hover{
-    animation: neon 5s infinite;
 
+a, a:hover, li {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
 }
-@keyframes neon {
-    0%, 39%, 41%, 59%, 61%, 100%{
-        text-shadow: 
-        white 0 0 12px,
-        #51039B 0 0 24px,
-        #51039B 0 0 36px;
-    }
-    40%, 60%{
-        text-shadow:none;
-    }
+
+a:hover {
+    color: #734f9a;
+}
+
+/* Navbar Styles */
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-family: 'Ultra', serif;
+}
+
+ul.navbar a {
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+ul.navbar a:hover {
+    background-color: #734f9a;
+    color:white;
+}
+
+/* Content Styles */
+.content {
+    font-family: 'PT Serif', serif;
+}
+
+section > ul {
+    padding: 0;
+    text-align: left;
+}
+
+.portrait{
+    border-radius: 50%;
+    width:20vw ; height : auto;
+}
+
+/* Logo Styles */
+.logo {
+    font-family: 'Ultra', serif;
 }
