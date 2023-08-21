@@ -39,6 +39,7 @@ ul.navbar a {
 
 ul.navbar a:hover {
     background-color: #734f9a;
+    color:white;
 }
 
 /* Content Styles */
