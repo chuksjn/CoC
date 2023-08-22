@@ -125,3 +125,13 @@ section > ul {
     background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
     transition: .3s;
 }
+/* Tech Page */
+.resume {
+    display: flex;
+    align-items: center; /* This will vertically center the items if they have different heights */
+    gap: 20px; /* This creates space between the CV thumbnail and the description */
+}
+
+.resumetalk {
+    flex: 1; /* This will allow the description to take up the remaining space */
+}
