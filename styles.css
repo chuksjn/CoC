@@ -1,5 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto:ital,wght@1,100&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=PT+Serif&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@1,100&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@1,100&family=Ultra&display=swap');
 
+/* Media Queries for Responsiveness*/
+
+/* Tablet View */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .gallery__image {
+        
+        width: 80%;
+    }
+
+    
+    .content {
+        font-size: 18px;
+    }
+
+    
+    .gallery__column {
+        width: 50%; 
+    }
+}
+
+/* Mobile Phone View */
+@media only screen and (max-width: 767px) {
+    
+    .gallery {
+        flex-direction: column;
+    }
+
+    
+    .gallery__column {
+        width: 100%;
+    }
+
+    
+    .content {
+        font-size: 16px;
+    }
+
+    
+    ul.navbar {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    ul.navbar a {
+        padding: 10px 24px; 
+    }
+}
 /* Global Styles */
 html {
     scroll-behavior: smooth;
@@ -8,7 +58,7 @@ html {
 body {
     background-color: #111; /* cooler black */
     color: white;
-    font-family: 'Ultra', serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 a, a:hover, li {
@@ -21,6 +71,8 @@ a:hover {
     color: #734f9a;
 }
 
+
+
 /* Navbar Styles */
 ul.navbar {
     list-style-type: none;
@@ -29,7 +81,7 @@ ul.navbar {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    font-family: 'Ultra', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul.navbar a {
@@ -42,9 +94,10 @@ ul.navbar a:hover {
     color:white;
 }
 
+
 /* Content Styles */
 .content {
-    font-family: 'PT Serif', serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 section > ul {
@@ -60,9 +113,13 @@ section > ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.specialtext{
+    font-family: 'Oswald', serif;
+}
+
 /* Logo Styles */
 .logo {
-    font-family: 'Ultra', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*Gallery Styles */
@@ -118,7 +175,7 @@ section > ul {
     left: 0;
     padding: 25px 15px 15px;
     width: 100%;
-    font-family: 'Ultra', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
     color: white;
     opacity: 0;
