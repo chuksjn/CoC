@@ -1,5 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto:ital,wght@1,100&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=PT+Serif&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@1,100&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@1,100&family=Ultra&display=swap');
 
+/* Media Queries for Responsiveness*/
+
+/* Tablet View */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .gallery__image {
+        
+        width: 80%;
+    }
+
+    
+    .content {
+        font-size: 18px;
+    }
+
+    
+    .gallery__column {
+        width: 50%; 
+    }
+}
+
+/* Mobile Phone View */
+@media only screen and (max-width: 767px) {
+    
+    .gallery {
+        flex-direction: column;
+    }
+
+    
+    .gallery__column {
+        width: 100%;
+    }
+
+    
+    .content {
+        font-size: 16px;
+    }
+
+    
+    ul.navbar {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    ul.navbar a {
+        padding: 10px 24px; 
+    }
+}
 /* Global Styles */
 html {
     scroll-behavior: smooth;
@@ -8,7 +58,7 @@ html {
 body {
     background-color: #111; /* cooler black */
     color: white;
-    font-family: 'Ultra', serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 a, a:hover, li {
@@ -21,30 +71,38 @@ a:hover {
     color: #734f9a;
 }
 
+
+
+
 /* Navbar Styles */
-ul.navbar {
+.header-navbar {
     list-style-type: none;
     margin: 0;
     padding: 10px 15px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    font-family: 'Ultra', serif;
+    justify-content: center;    /* It puts the nav in the center */
+    font-family: 'Roboto', sans-serif;
 }
 
-ul.navbar a {
+.header-navbar li {
+    margin: 10px 0;  /* Adds space between each list item */
+}
+
+.header-navbar a {
     padding: 8px 16px;
     transition: background-color 0.3s ease;
 }
 
-ul.navbar a:hover {
+.header-navbar a:hover {
     background-color: #734f9a;
-    color:white;
+    color: white;
 }
+
+
 
 /* Content Styles */
 .content {
-    font-family: 'PT Serif', serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 section > ul {
@@ -60,16 +118,22 @@ section > ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.specialtext{
+    font-family: 'Oswald', serif;
+}
+
 /* Logo Styles */
 .logo {
-    font-family: 'Ultra', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*Gallery Styles */
 .gallery {
     display: flex;
-    padding: 2px;
-    transition: .3s;
+    flex-wrap: wrap;     /* Allow wrapping of items */
+    flex-direction: column;
+    height: 800px; /* Adjust according to your design preference */
+    align-content: start;
 }
 
 .gallery:hover .gallery__image {
@@ -100,12 +164,10 @@ section > ul {
 }
 
 .gallery__image {
-    display: block;
     width: 100%;
+    object-fit: cover;
     transition: .3s;
     filter: grayscale(0);
-    object-fit: cover;
-    height: 100%;
 }
 
 .gallery__image:hover {
@@ -118,7 +180,7 @@ section > ul {
     left: 0;
     padding: 25px 15px 15px;
     width: 100%;
-    font-family: 'Ultra', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 16px;
     color: white;
     opacity: 0;
@@ -126,12 +188,63 @@ section > ul {
     transition: .3s;
 }
 /* Tech Page */
-.resume {
+.resume-container {
     display: flex;
     align-items: center; /* This will vertically center the items if they have different heights */
     gap: 20px; /* This creates space between the CV thumbnail and the description */
 }
 
-.resumetalk {
-    flex: 1; /* This will allow the description to take up the remaining space */
+
+/* Footer */
+
+.copyright-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help; 
+}
+
+/* Style the tooltip text because it's hidden by default */
+.copyright-tooltip::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* Center the tooltip */
+    white-space: nowrap;
+    background-color: #333; 
+    color: #fff; /* White text */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 100; /* Place it above other elements */
+    opacity: 0; /* Start with it being invisible */
+    pointer-events: none; /* Don't interfere with mouse events */
+    transition: opacity 0.3s; /* Smooth fade-in effect */
+}
+
+/* Show the tooltip when hovering over the parent element */
+.copyright-tooltip:hover::after {
+    bottom: 125%; /* Adjust as needed based on the bubble's size */
+    opacity: 1; /* Make it visible */
+}
+.footer-navbar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;  /* Stack items ontop of each other */
+    align-items: left;     
+    padding: 0;
+    margin: 20px 0;
+}
+
+.footer-navbar li {
+    margin: 10px 0;  /* Add space between each list item */
+}
+
+.footer-navbar a {
+    text-decoration: none;
+    color: #aaa; 
+}
+
+.footer-navbar a:hover {
+    color: #fff;
 }
