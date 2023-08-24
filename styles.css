@@ -131,7 +131,7 @@ section > ul {
 .gallery {
     display: flex;
     flex-wrap: wrap;     /* Allow wrapping of items */
-    flex-direction: column;
+    flex-direction: row;
     height: 800px; /* Adjust according to your design preference */
     align-content: start;
 }
