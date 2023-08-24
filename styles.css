@@ -80,7 +80,7 @@ a:hover {
     margin: 0;
     padding: 10px 15px;
     display: flex;
-    justify-content: center;    /* This centers them horizontally */
+    justify-content: center;    /* It puts the nav in the center */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -196,14 +196,14 @@ section > ul {
 
 
 /* Footer */
-/* Basic styling for the tooltip */
+
 .copyright-tooltip {
     position: relative;
     display: inline-block;
-    cursor: help; /* Change cursor to a question mark on hover */
+    cursor: help; 
 }
 
-/* Style the tooltip text. It's hidden by default */
+/* Style the tooltip text because it's hidden by default */
 .copyright-tooltip::after {
     content: attr(title);
     position: absolute;
@@ -211,7 +211,7 @@ section > ul {
     left: 50%;
     transform: translateX(-50%); /* Center the tooltip */
     white-space: nowrap;
-    background-color: #333; /* Dark background for the tooltip */
+    background-color: #333; 
     color: #fff; /* White text */
     padding: 5px 10px;
     border-radius: 5px;
@@ -230,8 +230,8 @@ section > ul {
 .footer-navbar {
     list-style-type: none;
     display: flex;
-    flex-direction: column;  /* Stack items vertically */
-    align-items: left;     /* Center items horizontally */
+    flex-direction: column;  /* Stack items ontop of each other */
+    align-items: left;     
     padding: 0;
     margin: 20px 0;
 }
