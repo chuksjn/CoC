@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE-Edge" />
     <title>Chronicles of Chukwuma</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -15,7 +19,7 @@
             <a href="Index.html">Chronicles of Chukwuma</a> 
         </div>
         <nav>
-            <ul class="navbar">
+            <ul class="header-navbar">
                 <li><a href="Index.html">About me</a></li>
                 <li><a href="Art.html">Art</a></li>
                 <li><a href="Tech.html">Tech</a></li>
@@ -28,7 +32,7 @@
         <section>
             <h2>About me</h2>
             <div>
-            <p>Hey there! I'm Chukwumaihe Nzerue,but you can just call me Chuks. I'm diving headfirst into the tech space, dreaming big and aiming to make it big as a <span class="'specialtext">full-stack developer</span>. When I'm not busy giving myself a headache with code, you'll find me reading novels, a killer manga, or just playing video games on my ones 🎮📚🎨🖥️.</p>
+            <p>Hey there! I'm Chukwumaihe Nzerue,but you can just call me Chuks. I'm diving headfirst into the tech space, dreaming big and aiming to make it big as a <span class="specialtext">FULLSTACK DEVELOPER</span>. When I'm not busy giving myself a headache with code, you'll find me reading novels, a killer manga, or just playing video games on my ones 🎮📚🎨🖥️.</p>
             </div>
             <div>
             <aside>
@@ -40,9 +44,9 @@
         <section>
             <h2>Favourite Hobbies</h2>
             <ul>
-                <li>Playing video games</li>
+                <li class="copyright-tooltip" title="Football Manager Addict">Playing video games</li>
                 <li>Reading Manga</li>
-                <li>Collecting weird socks</li>
+                <li class="copyright-tooltip" title="Over 105 pairs and counting">Collecting weird socks</li>
                 <li>Working out</li>
             </ul>
         </section>
@@ -62,38 +66,44 @@
             <h2>Contact Form</h2>
             <form method="post" action="www.chroniclesofchukwuma.gyattt">
                 <fieldset>
+                    <legend>Personal Information</legend>
                     <div>
                         <label for="full-name">Name:</label> 
-                        <input id='full-name' name='full-name' type='text' required>
+                        <input id="full-name" name="full-name" type="text" required aria-label="Enter your full name">
                     </div>
                     <div>
                         <label for="email">Email:</label>
-                        <input id='email' name='email' type='email' required placeholder="blahblah@yahoo.com">
-                    </div>
-                    <div>
-                        <label for="referrer">How did you hear about me?</label>
-                        <select id="referrer" name="referrer">
-                            <option value="">Select an option...</option>
-                            <option value="1">Twitter</option>
-                            <option value="2">Github</option>
-                            <option value="3">The streets aka GistHub hehe;)</option>
-                        </select>
+                        <input id="email" name="email" type="email" required placeholder="blahblah@yahoo.com" aria-label="Enter your email address">
                     </div>
                     <div>
                         <label for="shortmessage">Leave your enquiry here:</label>
-                        <textarea id="shortmessage" name="shortmessage" rows="5" cols="60" placeholder="Dont forget to praise me as you do so, really get into detail here..."></textarea>
                     </div>
                     <div>
-                        <button type="submit">Send</button>
+                        <textarea id="shortmessage" name="shortmessage" rows="5" cols="60" placeholder="Don't forget to praise me as you do so, really get into detail here..." aria-label="Enter your detailed enquiry"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" aria-label="Submit your enquiry">Send</button>
                     </div>
                 </fieldset>
+                
             </form>
         </section>
+        
     </main>
 
     <footer>
-        <p>Not a lawyer, I don't know what a copyright is</p>
+        <nav>
+            <ul class="footer-navbar">
+                <li><a href="Index.html">About me</a></li>
+                <li><a href="Art.html">Art</a></li>
+                <li><a href="Tech.html">Tech</a></li>
+                <li><a href="Contact.html">Contact me</a></li>
+            </ul>
+        </nav>
+        <p class="copyright-tooltip" title="Not a lawyer, I don't know what a copyright is">© 2023 Chronicles of Chukwuma. All rights reserved.</p>
     </footer>
+    
+    
 </body>
 
 </html>

@@ -73,26 +73,31 @@ a:hover {
 
 
 
+
 /* Navbar Styles */
-ul.navbar {
+.header-navbar {
     list-style-type: none;
     margin: 0;
     padding: 10px 15px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;    /* This centers them horizontally */
     font-family: 'Roboto', sans-serif;
 }
 
-ul.navbar a {
+.header-navbar li {
+    margin: 10px 0;  /* Adds space between each list item */
+}
+
+.header-navbar a {
     padding: 8px 16px;
     transition: background-color 0.3s ease;
 }
 
-ul.navbar a:hover {
+.header-navbar a:hover {
     background-color: #734f9a;
-    color:white;
+    color: white;
 }
+
 
 
 /* Content Styles */
@@ -125,8 +130,10 @@ section > ul {
 /*Gallery Styles */
 .gallery {
     display: flex;
-    padding: 2px;
-    transition: .3s;
+    flex-wrap: wrap;     /* Allow wrapping of items */
+    flex-direction: column;
+    height: 800px; /* Adjust according to your design preference */
+    align-content: start;
 }
 
 .gallery:hover .gallery__image {
@@ -157,12 +164,10 @@ section > ul {
 }
 
 .gallery__image {
-    display: block;
     width: 100%;
+    object-fit: cover;
     transition: .3s;
     filter: grayscale(0);
-    object-fit: cover;
-    height: 100%;
 }
 
 .gallery__image:hover {
@@ -183,12 +188,63 @@ section > ul {
     transition: .3s;
 }
 /* Tech Page */
-.resume {
+.resume-container {
     display: flex;
     align-items: center; /* This will vertically center the items if they have different heights */
     gap: 20px; /* This creates space between the CV thumbnail and the description */
 }
 
-.resumetalk {
-    flex: 1; /* This will allow the description to take up the remaining space */
+
+/* Footer */
+/* Basic styling for the tooltip */
+.copyright-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: help; /* Change cursor to a question mark on hover */
+}
+
+/* Style the tooltip text. It's hidden by default */
+.copyright-tooltip::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%); /* Center the tooltip */
+    white-space: nowrap;
+    background-color: #333; /* Dark background for the tooltip */
+    color: #fff; /* White text */
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 100; /* Place it above other elements */
+    opacity: 0; /* Start with it being invisible */
+    pointer-events: none; /* Don't interfere with mouse events */
+    transition: opacity 0.3s; /* Smooth fade-in effect */
+}
+
+/* Show the tooltip when hovering over the parent element */
+.copyright-tooltip:hover::after {
+    bottom: 125%; /* Adjust as needed based on the bubble's size */
+    opacity: 1; /* Make it visible */
+}
+.footer-navbar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: left;     /* Center items horizontally */
+    padding: 0;
+    margin: 20px 0;
+}
+
+.footer-navbar li {
+    margin: 10px 0;  /* Add space between each list item */
+}
+
+.footer-navbar a {
+    text-decoration: none;
+    color: #aaa; 
+}
+
+.footer-navbar a:hover {
+    color: #fff;
 }
