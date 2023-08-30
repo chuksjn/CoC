@@ -111,7 +111,7 @@ section > ul {
 }
 
 .portrait{
-    border-radius: 100%;
+    border-radius: 50%;
     width:30vw ; 
     height : auto;
     max-width: 500px;
@@ -131,7 +131,7 @@ section > ul {
 .gallery {
     display: flex;
     flex-wrap: wrap;     /* Allow wrapping of items */
-    flex-direction: column;
+    flex-direction: row;
     height: 800px; /* Adjust according to your design preference */
     align-content: start;
 }
